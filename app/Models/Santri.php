@@ -71,6 +71,16 @@ class Santri extends Model
 
         'jenjang',
         'kelas',
+
+        'pendaftaran',
+        'bayar_pendaftaran',
+        'verifikasi_bayar_pendaftaran',
+        'upload_berkas',
+        'verifikasi_berkas',
+        'terima_undangan_ujian',
+        'ujian_seleksi',
+        'bayar_daftar_ulang',
+        'verifikasi_daftar_ulang',
     ];
 
     protected $casts = [

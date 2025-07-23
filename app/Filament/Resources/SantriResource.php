@@ -19,6 +19,7 @@ use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Section;
 use pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction;
 use pxlrbt\FilamentExcel\Actions\Tables\ExportAction;
+use Filament\Forms\Components\Checkbox;
 
 class SantriResource extends Resource
 {
@@ -163,6 +164,21 @@ class SantriResource extends Resource
                         ])
                         ->required(),
                 ])->columns(2),
+
+                Section::make('Tahapan Seleksi')
+                    ->schema([
+                        Checkbox::make('pendaftaran')->label('Pendaftaran'),
+                        Checkbox::make('bayar_pendaftaran')->label('Bayar Pendaftaran'),
+                        Checkbox::make('verifikasi_bayar_pendaftaran')->label('Verifikasi Bayar Pendaftaran'),
+                        Checkbox::make('upload_berkas')->label('Upload Berkas'),
+                        Checkbox::make('verifikasi_berkas')->label('Verifikasi Berkas'),
+                        Checkbox::make('terima_undangan_ujian')->label('Terima Undangan Ujian Seleksi'),
+                        Checkbox::make('ujian_seleksi')->label('Ujian Seleksi'),
+                        Checkbox::make('bayar_daftar_ulang')->label('Bayar Daftar Ulang'),
+                        Checkbox::make('verifikasi_daftar_ulang')->label('Verifikasi Daftar Ulang'),
+                    ])
+                    ->columns(2)
+                    ->collapsed(),
             ]);
     }
 
